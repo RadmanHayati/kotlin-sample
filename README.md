@@ -3,9 +3,5 @@
  > The latest changes of the project are available in the **Develop** Branch.
 
 You can download the APK file via [Google Drive](https://drive.google.com/file/d/1-KtQGMDp67jaPs-YjU39_gO42LqnL0O1/view?usp=sharing).
-<div align="center">
-    <img src="[/screenshots/screen1.jpg](https://drive.google.com/file/d/10AhWvNIlsqdtpL6PUHRJUgpCyQOGBYQX/view?usp=sharing)" width="400px"</img> 
-</div>
 
-
-
+<img width="1728" alt="Screenshot 2024-04-29 at 9 11 26 PM" src="https://github.com/RadmanHayati/cafebazar/assets/72970748/7fdd3336-6393-4de0-951b-8bae04615c29">
