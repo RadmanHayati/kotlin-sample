@@ -12,7 +12,7 @@ fun MovieDto.toMovieEntity(): MovieEntity {
         originalTitle = original_title,
         originalLanguage = original_language,
         overview = overview,
-        posterPath =  "https://image.tmdb.org/t/p/original$poster_path",
+        posterPath =  "https://image.tmdb.org/t/p/original$poster_path", // todo : replace with String extension function
         voteAverage = vote_average,
         voteCount = vote_count,
         page = 0
