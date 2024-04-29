@@ -1,6 +1,7 @@
 package com.radmanhayati.cafebazar.presentation
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
@@ -19,8 +20,11 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
@@ -36,36 +40,28 @@ fun MovieItem(
     movie: Movie,
     modifier: Modifier = Modifier
 ) {
-    Card(
-        modifier = modifier,
-        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .height(IntrinsicSize.Max),
+        verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
-        Row(
+        AsyncImage(
+            model = movie.posterPath,
+            contentDescription = movie.name,
             modifier = Modifier
-                .fillMaxWidth()
-                .height(IntrinsicSize.Max)
-                .padding(16.dp)
-        ) {
-            AsyncImage(
-                model = movie.posterPath,
-                contentDescription = movie.name,
-                modifier = Modifier
-                    .weight(1f)
-                    .height(150.dp)
-            )
-            Spacer(modifier = Modifier.width(16.dp))
-            Column(
-                modifier = Modifier
-                    .weight(3f)
-                    .fillMaxHeight(),
-                verticalArrangement = Arrangement.Center
-            ) {
-                Text(
-                    text = movie.name,
-                    modifier = Modifier.fillMaxWidth()
-                )
-            }
-        }
+                .clip(RoundedCornerShape(8.dp))
+                .background(Color.White)
+                .weight(1f)
+                .height(150.dp),
+            contentScale = ContentScale.Crop
+        )
+        Text(
+            text = movie.name,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.fillMaxWidth()
+        )
     }
 }
 
@@ -73,28 +69,17 @@ fun MovieItem(
 @Composable
 fun BeerItemPreview() {
     CafebazarTheme {
-        Column {
-            Button(
-                onClick = {
-
-                },
-                content = {
-                    Text(text = "Refresh", color = red)
-                },
-                colors = ButtonDefaults.buttonColors(containerColor = darkGray),
-                shape = RoundedCornerShape(4.dp),
-                border = BorderStroke(1.dp, lightGray)
+        MovieItem(
+            movie = Movie(
+                id = 1,
+                name = "name",
+                originalTitle = "sd",
+                voteAverage = 4.1,
+                voteCount = 200,
+                overview = "overw",
+                originalLanguage = "s",
+                posterPath = "s"
             )
-            Button(
-                onClick = {
-
-                },
-                content = {
-                    Text(text = "Refresh", color = Color.White)
-                },
-                colors = ButtonDefaults.buttonColors(containerColor = blue),
-                shape = RoundedCornerShape(20.dp)
-            )
-        }
+        )
     }
 }
