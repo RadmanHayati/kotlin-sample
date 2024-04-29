@@ -3,8 +3,9 @@
  > The latest changes of the project are available in the **Develop** Branch.
 
 You can download the APK file via [Google Drive](https://drive.google.com/file/d/1-KtQGMDp67jaPs-YjU39_gO42LqnL0O1/view?usp=sharing).
+<div align="center">
+    <img src="[/screenshots/screen1.jpg](https://drive.google.com/file/d/10AhWvNIlsqdtpL6PUHRJUgpCyQOGBYQX/view?usp=sharing)" width="400px"</img> 
+</div>
 
-
-![](https://drive.google.com/file/d/10AhWvNIlsqdtpL6PUHRJUgpCyQOGBYQX/view?usp=sharing)
 
 
